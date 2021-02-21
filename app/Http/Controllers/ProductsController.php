@@ -110,7 +110,7 @@ class ProductsController extends Controller
         $products->expiredate = $date;
         $products->save();
         return response()->json([
-            'massage' => 'สำเร็จ',
+            'massage' => 'สำเร็จอิอิ',
             'data' => $products,
         ], 200);
     }
