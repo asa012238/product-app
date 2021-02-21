@@ -84,6 +84,18 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
         $name = $request->nameproducts;
         $detail = $request->detail;
         $quantity = $request->quantity;
@@ -101,18 +113,6 @@ class ProductsController extends Controller
             'massage' => 'สำเร็จ',
             'data' => $products,
         ], 200);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**
